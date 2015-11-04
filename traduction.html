@@ -26,8 +26,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        
+        <li class="active"><a href="#">Translation</a></li>
+        <li><a href="#">Waiting list</a></li>
+        <li><a href="#">About Me</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -39,7 +40,6 @@
 
 <div class="container">
   <h1>Interface de Traduction</h1>
-
   <div class="row">
   <div class="col-sm-6">
 	<h2>Original</h2>
@@ -64,11 +64,18 @@
    
 		<div class = "form-group">
 			<label for = "name">English</label>
+                    <div class="progress">
+      <div class="progress-bar " role="progressbar" aria-valuenow="150"
+      aria-valuemin="0" aria-valuemax="250" style="width:60%">
+        60% Complete (150/250 Words)
+      </div>
+    </div>
 			<textarea class = "form-control" rows = "20" id="edition"></textarea>
             <script>
                 CKEDITOR.replace( 'edition' );
             </script>
 		</div>
+
 		<button type="button" class="btn btn-warning">Annuler</button>
 		<button type="button" class="btn btn-success">Enregistrer</button>
 		<button type="button" class="btn btn-success">Envoyer</button>
