@@ -1,0 +1,25 @@
+
+@font-face {
+font-family: 'Helvetica Neue LT Std 45 Light';
+font-style: normal;
+font-weight: normal;
+src: local('Helvetica Neue LT Std 45 Light'), url('../fonts/HelveticaNeueLTStd Lt.woff') format('woff');
+}
+
+
+h1,h2 {
+    font-family:'Helvetica Neue LT Std 45 Light'; 
+}
+
+h1 {
+    font-size:300%;
+  //  color:#27ae60;
+}
+
+h2 {
+}
+
+nav.navbar{
+   // color:#27ae60;
+}
+
