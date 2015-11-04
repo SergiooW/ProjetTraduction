@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 
@@ -55,7 +56,10 @@
    
 		<div class = "form-group">
 			<label for = "name">French to English</label>
-			<textarea class = "form-control" rows = "20"></textarea>
+			<textarea class = "form-control" rows = "20" id="edition"></textarea>
+            <script>
+                CKEDITOR.replace( 'edition' );
+            </script>
 		</div>
 		<button type="button" class="btn btn-warning">Annuler</button>
 		<button type="button" class="btn btn-success">Enregistrer</button>
