@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Interface de traduction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="js/ckeditor/ckeditor.js"></script>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Projet Traduction</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Translation</a></li>
+        <li class="active"><a href="#">Waiting list</a></li>
+        <li><a href="#">About Me</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Traductions en attente</h1>
+      <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Langue</th>
+        <th>Domaine</th>
+        <th>Titre</th>
+        <th>Délais</th>
+        <th>Taille</th>
+        <th>Gain</th>
+        <th>Infos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>EN <span class="glyphicon glyphicon-arrow-right"></span> FR</td>
+        <td>Tourisme</td>
+        <td>London subway</td>
+        <td>7 jours</td>
+        <td>268</td>
+        <td>53,6 €</td>
+        <td><a href="#" class="btn btn-info"><span class="glyphicon glyphicon-menu-right"></span> Voir le texte</a></td>
+      </tr>
+      <tr>
+        <td>DE <span class="glyphicon glyphicon-arrow-right"></span> FR</td>
+        <td>Commercial</td>
+        <td>IKEA Vorschlag</td>
+        <td>4 jours</td>
+        <td>1854</td>
+        <td>556,2 €</td>
+        <td><a href="#" class="btn btn-info"><span class="glyphicon glyphicon-menu-right"></span> Voir le texte</a></td>          
+      </tr>
+      <tr class="danger">
+        <td>DE <span class="glyphicon glyphicon-arrow-right"></span> FR</td>
+        <td>Littérature</td>
+        <td>Intranetbasierten Lösungen</td>
+        <td>30 jours</td>
+        <td>5497</td>
+        <td>1439,16 €</td>
+        <td><a href="#" class="btn btn-info"><span class="glyphicon glyphicon-menu-right"></span> Voir le texte</a></td>          
+      </tr>
+    </tbody>
+  </table>
+  
+
+</div>
+
+</body>
+</html>
