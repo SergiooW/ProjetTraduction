@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Interface de traduction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src="js/ckeditor/ckeditor.js"></script>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Projet Traduction</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Translation</a></li>
+        <li class="active"><a href="#">Waiting list</a></li>
+        <li><a href="#">About Me</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<h1>Faire une demande</h1>
+<h2>Options</h2> 
+<div class="well well-lg">
+<script type="text/javascript">
+function prix()
+{
+
+    var traduitde = parseInt(document.getElementById('traduitde').value);
+    var resultat = traduitde * 254 /100 ;
+    document.getElementById('prix').innerHTML = resultat+'€';
+    document.getElementById('post_traduitde').value = traduitde;
+    
+}
+</script>
+   
+<form role="form">
+    
+<label for="sel1">Traduction</label>
+<div class="form-group">
+  <select onchange="prix()" id="traduitde" name="traduitde">
+    <option value="18" selected="selected">Français</option>
+    <option value="15">Allemand</option>
+    <option value="12">Anglais</option>
+    <option value="11">Italien</option>
+    <option value="12">Espagnol</option>
+  </select>
+
+<span class="glyphicon glyphicon-arrow-right"></span>
+
+  <select id="sel1">
+    <option>Français</option>
+    <option>Allemand</option>
+    <option>Anglais</option>
+    <option>Italien</option>
+    <option>Espagnol</option>
+  </select>
+</div>
+  <label>Niveau de la traduction</label>
+  <div class="form-group">
+    <label class="radio-inline"><input type="radio" name="optradio">Classique</label>
+    <label class="radio-inline"><input type="radio" name="optradio">Confirmé</label>
+    <label class="radio-inline"><input type="radio" name="optradio">Expert</label>
+  </div>
+  <label for="sel1">Délais</label>
+  <div class="form-group">
+    <label class="radio-inline"><input type="radio" name="optradio">7 jours</label>
+    <label class="radio-inline"><input type="radio" name="optradio">4 jours</label>
+    <label class="radio-inline"><input type="radio" name="optradio">2 jours</label>
+  </div>
+
+    
+Prix : <span id="prix">0€</span>
+</form>
+ 
+<form method="post" action="scripts/formdemande.php">
+<input id="post_option1" name="option1" value="5" style="display:none;"/>
+<input id="post_quantite" name="quantite" value="100" style="display:none;"/>
+<input id="post_option2" name="option2" value="10" style="display:none;"/>
+<div class="checkbox">
+<label><input type="checkbox"> J'accepte les conditions</label>
+</div>
+<button id="submit" name="submit" type="submit" class="btn btn-success ">Envoyer la demande</button>
+</form>
+</div>       
+<h2>Texte</h2>
+<textarea class = "form-control" rows = "20" id="edition"></textarea>
+<script>CKEDITOR.replace( 'edition' );</script>
+</body>
+</html>
