@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Interface de traduction</title>
+  <title>Demande de traduction</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -26,21 +26,27 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="#">Translation</a></li>
-        <li class="active"><a href="#">Waiting list</a></li>
+        <li class="active"><a href="#">Translation</a></li>
+        <li><a href="#">Waiting list</a></li>
         <li><a href="#">About Me</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon glyphicon-log-out"></span> Logout</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <div class="container">
+    <h1>Faire une demande</h1>
+<div class="row">
+<div class="col-sm-8">
+<h2>Texte</h2>
+<textarea class = "form-control" rows = "20" id="edition"></textarea>
+<script>CKEDITOR.replace( 'edition' );</script>
+</div>
 
-<h1>Faire une demande</h1>
+<div class="col-sm-4">
 <h2>Options</h2> 
 <div class="well well-lg">
 <script type="text/javascript">
@@ -89,6 +95,11 @@ function prix()
     <label class="radio-inline"><input type="radio" name="optradio">4 jours</label>
     <label class="radio-inline"><input type="radio" name="optradio">2 jours</label>
   </div>
+    
+  <div class="form-group">
+    Relecture par un 2ème traducteur 
+   <input type="checkbox" checked>
+  </div>
 
     
 Prix : <span id="prix">0€</span>
@@ -103,9 +114,8 @@ Prix : <span id="prix">0€</span>
 </div>
 <button id="submit" name="submit" type="submit" class="btn btn-success ">Envoyer la demande</button>
 </form>
-</div>       
-<h2>Texte</h2>
-<textarea class = "form-control" rows = "20" id="edition"></textarea>
-<script>CKEDITOR.replace( 'edition' );</script>
+</div>
+</div>
+</div>
 </body>
 </html>
